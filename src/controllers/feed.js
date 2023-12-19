@@ -82,7 +82,7 @@ exports.createPosts = async (req, res, next) => {
 exports.getPost = async (req, res, next) => {
   const postId = req.params.postId;
   try {
-    let post = await Post.findById(postId);
+    let post = await Post.findById(postId).populate('creator');
     if (!post) {
       const error = new Error('Post not found');
       error.statusCode = 404;

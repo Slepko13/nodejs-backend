@@ -3,10 +3,17 @@
     "browser": true,
     "es2021": true,
     "node": true,
-    "mocha": true
+    "mocha": true,
+    "jest": true,
+    "jest/globals": true
   },
-  "extends": ["eslint:recommended", "prettier"],
-  "plugins": ["unused-imports", "import", "prettier"],
+  "extends": [
+    "eslint:recommended",
+    "prettier",
+    "plugin:jest/recommended",
+    "plugin:jest/style"
+  ],
+  "plugins": ["unused-imports", "import", "prettier", "jest"],
   "overrides": [],
   "parserOptions": {
     "ecmaVersion": 2021,
